@@ -1,20 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
 
-:root {
+:root{
     --base-clr: #fbfaff;
     --line-clr: #42424a;
-    --hover-clr: #17789a;
+    --hover-clr: #b2ceda;
     --text-clr: #42424a;
-    --accent-clr: #3124b3;
+    --accent-clr: hsl(245, 73%, 27%);
     --secondary-clr: #b0b3c2;
 }
 
-* {
+*{
     margin: 0;
     padding: 0;
 }
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5rem;
+}
 
-body {
+body{
     min-height: 100vh;
     min-height: 100dvh;
     background-color: var(--base-clr);
@@ -23,7 +27,7 @@ body {
     grid-template-columns: auto 1fr;
 }
 
-#sidebar {
+#sidebar{
     box-sizing: border-box;
     height: 100vh;
     width: 250px;
@@ -34,13 +38,18 @@ body {
     position: sticky;
     top: 0;
     align-self: start;
+    transition: 300ms ease-in-out;
+    overflow: hidden;
+    text-wrap: nowrap;
 }
-
-#sidebar ul {
+#sidebar.close{
+    padding: 5px;
+    width: 60px;
+}
+#sidebar ul{
     list-style: none;
 }
-
-#sidebar>ul>li:first-child {
+#sidebar > ul > li:first-child {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 16px;
@@ -50,18 +59,16 @@ body {
     }
 }
 
-#sidebar ul li.active a {
+#sidebar ul li.active{
     color: var(--accent-clr);
 
     svg {
         fill: var(--accent-clr);
     }
 }
-
-#sidebar a,
-#sidebar .logo {
+#sidebar .logo{
     border-radius: .5em;
-    padding: -85em;
+    padding: .25em;
     text-decoration: none;
     color: var(--text-clr);
     display: flex;
@@ -69,19 +76,14 @@ body {
     gap: 1em;
 }
 
-#sidebar svg {
+#sidebar svg{
     flex-shrink: 0;
     fill: var(--text-clr);
 }
-
-#sidebar a span {
-    flex-grow: 1;
-}
-
-#sidebar a:hover {
+#sidebar a:hover{
     background-color: var(--hover-clr);
 }
-#toggle-btn {
+#toggle-btn{
     margin-left: auto;
     padding: 1em;
     border: none;
@@ -89,25 +91,27 @@ body {
     background: none;
     cursor: pointer;
 
-    svg {
+    svg{
         transition: rotate 150ms ease;
     }
 }
 #toggle-btn:hover{
     background-color: var(--hover-clr);
 }
-
-main {
+.rotate svg:last-child{
+    rotate: 180deg;
+}
+main{
     padding: min(30px, 7%);
 }
 
-main p {
+main p{
     color: var(--secondary-clr);
     margin-top: 5px;
     margin-bottom: 15px;
 }
 
-.container {
+.container{
     border: 1px solid var(--line-clr);
     border-radius: 1em;
     margin-bottom: 20px;
@@ -115,6 +119,6 @@ main p {
 
     h2,
     p {
-        margin-top: 1em;
+        margin-top: .5em;
     }
 }
