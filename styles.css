@@ -86,6 +86,7 @@ body{
     fill: var(--accent-clr);
 }
 #sidebar .logo{
+    margin-right: 3.85em;
     border-radius: .5em;
     padding: .25em;
     text-decoration: none;
