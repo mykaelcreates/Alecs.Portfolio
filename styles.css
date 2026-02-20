@@ -175,3 +175,9 @@ main p{
 .item2 {
     flex: 1 1 475px;
 }
+a {
+    text-decoration: none;
+}
+a:hover {
+    color:cadetblue;
+}
