@@ -166,8 +166,12 @@ main p{
     }
 }
 .box {
+    width: 950px;
     display: flex;
 }
 .item1 {
-    flex: 1 1 500px;
+    flex: 1 1 475px;
+}
+.item2 {
+    flex: 1 1 475px;
 }
