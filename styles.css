@@ -6,7 +6,7 @@
     --hover-clr: #b2ceda;
     --text-clr: #42424a;
     --accent-clr: hsl(245, 73%, 27%);
-    --secondary-clr: #b0b3c2;
+    --secondary-clr: #2a2b2f;
 }
 
 *{
@@ -164,4 +164,10 @@ main p{
     p {
         margin-top: .5em;
     }
+}
+.box {
+    display: flex;
+}
+.item1 {
+    flex: 1 1 500px;
 }
