@@ -166,7 +166,7 @@ main p{
     }
 }
 .box {
-    width: 950px;
+    width: 950px auto;
     display: flex;
 }
 .item1 {
